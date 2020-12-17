@@ -1,0 +1,9 @@
+
+spring:
+  application.name: practice-app
+  jackson.serialization:
+    indent_output: true
+
+management.endpoints.web:
+  base-path: /app
+  exposure.include: '*'
