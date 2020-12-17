@@ -13,8 +13,7 @@
                                  filePattern="logs/app-%d{MM-dd-yyyy}-%i.log.gz"
                                  immediateFlush="true"
                                  append="true">
-            <JsonLayout compact="true" eventEol="true" locationInfo="true" properties="true" stacktraceAsString="true">
-                <KeyValuePair key="timestamp" value="$${date:yyyy-MM-dd'T'HH:mm:ss.SSSZ}"/>
+            <JsonLayout compact="true" eventEol="true" locationInfo="true" properties="true" stacktraceAsString="true" includeTimeMillis="true">
                 <KeyValuePair key="env" value="${env:SPRING_PROFILES_ACTIVE:-local}"/>
             </JsonLayout>
             <Policies>
